@@ -1,7 +1,9 @@
+import Icon from 'react-native-vector-icons/AntDesign';
 import {
   View,
   Text,
-  StyleSheet
+  StyleSheet,
+  TouchableOpacity
 } from "react-native";
 
 const Header = () => {
@@ -10,8 +12,19 @@ const Header = () => {
 
       <Text style={styles.title}>Whatsapp</Text>
       <View style={styles.containerItems}>
-        <Text>...</Text>
-        <Text>...</Text>
+        
+        <TouchableOpacity
+          style={styles.search}
+        >
+          <Icon name="search1" size={24} />
+        </TouchableOpacity>
+        
+        <TouchableOpacity
+          style={styles.menu}
+        >
+          <Icon name="ellipsis1" size={24} />
+        </TouchableOpacity>
+
       </View>
 
     </View>
@@ -32,6 +45,14 @@ const styles = StyleSheet.create({
 
   containerItems: {
     flexDirection: 'row'
+  },
+
+  search: {
+    marginRight: 10,
+  },
+
+  menu: {
+
   }
 });
 
