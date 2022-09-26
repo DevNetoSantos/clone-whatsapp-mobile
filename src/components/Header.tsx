@@ -12,6 +12,7 @@ const Header = () => {
     <View style={styles.container}>
 
       <Text style={styles.title}>Whatsapp</Text>
+      
       <View style={styles.containerItems}>
         
         <TouchableOpacity
