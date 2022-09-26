@@ -1,4 +1,5 @@
-import Icon from 'react-native-vector-icons/AntDesign';
+import Icon from 'react-native-vector-icons/Entypo';
+import Icon2 from 'react-native-vector-icons/Ionicons';
 import {
   View,
   Text,
@@ -16,13 +17,13 @@ const Header = () => {
         <TouchableOpacity
           style={styles.search}
         >
-          <Icon name="search1" size={24} />
+          <Icon2 name="search" size={24} />
         </TouchableOpacity>
         
         <TouchableOpacity
           style={styles.menu}
         >
-          <Icon name="ellipsis1" size={24} />
+          <Icon name="dots-three-vertical" size={21} />
         </TouchableOpacity>
 
       </View>
