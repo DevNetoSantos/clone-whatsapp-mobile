@@ -1,0 +1,1 @@
+## Projeto clone do whatsapp fazendo com React Native.
