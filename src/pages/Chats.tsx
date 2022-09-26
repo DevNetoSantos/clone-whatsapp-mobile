@@ -1,4 +1,5 @@
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import React from 'react';
 import {
   View,
   Text,
@@ -13,7 +14,7 @@ const Chats = () => {
       <TouchableOpacity
         style={styles.buttonMessage}
       >
-        <Icon name='android-messages' size={24}/>
+        <Icon name='android-messages' size={24} color='#FFF'/>
       </TouchableOpacity>
     </View>
   );
@@ -22,10 +23,11 @@ const Chats = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#FFF'
   },
 
   buttonMessage: {
-    backgroundColor: '#25D366',
+    backgroundColor: '#128C7E',
     height: 50,
     width: 50,
     borderRadius: 25,
