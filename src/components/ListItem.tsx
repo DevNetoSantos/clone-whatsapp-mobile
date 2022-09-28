@@ -28,19 +28,23 @@ const styles = StyleSheet.create({
     paddingTop: 15,
     paddingBottom: 15,
   },
+
   itemPhoto: {
     width: 50,
     height: 50,
     borderRadius: 30,
   },
+
   itemInfo: {
     marginLeft: 20,
   },
+
   itemP1: {
     fontSize: 22,
-    color: '#FFFFFF',
+    color: '#000',
     marginBottom: 5
   },
+  
   itemP2: {
     fontSize: 18,
     color: '#999999',
