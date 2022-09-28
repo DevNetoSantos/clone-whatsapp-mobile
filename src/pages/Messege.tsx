@@ -1,9 +1,10 @@
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { StatusBar } from 'react-native';
+import { FlatList, StatusBar } from 'react-native';
 import React from 'react';
+import ApiFake from '../config/ApiFake';
+import ListItem from '../components/ListItem';
 import {
   View,
-  Text,
   TouchableOpacity,
   StyleSheet
 } from "react-native";
@@ -13,6 +14,11 @@ const SendMessege = ({navigation}: any) => {
 
   return(
     <View style={styles.container}>
+      <FlatList 
+        data={ApiFake}
+        style={styles.list}
+        renderItem={({ item }) => <ListItem data={item} />}
+      />
       <StatusBar barStyle={'light-content'}/>
       
       <TouchableOpacity
@@ -41,7 +47,11 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 15,
     right: 10
-  }
+  },
+
+  list: {
+    flex: 1,
+  },
 });
 
 export default SendMessege;

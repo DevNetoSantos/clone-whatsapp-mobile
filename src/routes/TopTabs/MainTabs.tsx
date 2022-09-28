@@ -1,6 +1,4 @@
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import CustomTopBars from '../../components/CustomTopBars';
-import Calls from '../../pages/Calls';
 import Messge from '../../pages/Messege';
 import Phone from '../../pages/Phone';
 import Status from '../../pages/Status';
