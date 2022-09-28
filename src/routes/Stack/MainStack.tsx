@@ -1,6 +1,8 @@
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import ButtomHeader from '../../components/ButtonHeader';
+import ButtonHeaderCall from '../../components/ButtonHeaderCall';
+import ButtonHeaderChat from '../../components/ButtonHeaderChat';
 import SelectContactCall from '../../pages/SelectContactCall';
 import SelectContactChat from '../../pages/SelectContactChat';
 import MainTabs from '../TopTabs/MainTabs';
@@ -10,33 +12,37 @@ const Stack = createNativeStackNavigator();
 function MainStack() {
   return (
     <Stack.Navigator
-      screenOptions={{
-        headerRight: (props) => <ButtomHeader {...props} />
-      }}
     >
 
       <Stack.Screen
         name="Home"
         component={MainTabs}
-        options={
-          {title: 'Whatsapp'}
-        }
+        options={{
+          title: 'Whatsapp',
+          headerRight: (props) => <ButtomHeader {...props} />,
+        }}
       />
 
       <Stack.Screen
         name='SelectContactChat'
         component={SelectContactChat}
-        options={{title: 'Select Contact'}}
+        options={{
+          title: 'Select Contact',
+          headerRight: (props) => <ButtonHeaderChat {...props} />,
+        }}
       />
 
       <Stack.Screen
         name='SelectContactCall'
         component={SelectContactCall}
-        options={{title: 'Select Contact'}}
+        options={{
+          title: 'Select Contact',
+          headerRight: (props) => <ButtonHeaderCall {...props} />,
+        }}
       />
 
     </Stack.Navigator>
   );
 }
 
-export default MainStack
+export default MainStack;
