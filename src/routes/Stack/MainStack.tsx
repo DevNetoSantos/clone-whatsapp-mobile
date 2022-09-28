@@ -1,5 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
+import ButtomHeader from '../../components/ButtonHeader';
 import SelectContactCall from '../../pages/SelectContactCall';
 import SelectContactChat from '../../pages/SelectContactChat';
 import MainTabs from '../TopTabs/MainTabs';
@@ -8,12 +9,18 @@ const Stack = createNativeStackNavigator();
 
 function MainStack() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerRight: (props) => <ButtomHeader {...props} />
+      }}
+    >
 
       <Stack.Screen
         name="Home"
         component={MainTabs}
-        options={{title: 'Whatsapp'}}
+        options={
+          {title: 'Whatsapp'}
+        }
       />
 
       <Stack.Screen
