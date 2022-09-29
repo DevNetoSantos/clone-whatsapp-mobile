@@ -1,14 +1,21 @@
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { RootState } from '../redux/store';
 import {
   View,
   TouchableOpacity,
-  StyleSheet
+  StyleSheet,
+  Text
 } from "react-native";
 
 const Phone = ({navigation}: any) => {
+  const user = useSelector((state: RootState) => state.user);
+
   return(
     <View style={styles.container}>
+
+      <Text>{user.name}</Text>
       
       <TouchableOpacity
         style={styles.buttonPhone}
