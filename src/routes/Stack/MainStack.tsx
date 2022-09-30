@@ -7,7 +7,6 @@ import SelectContactCall from '../../pages/SelectContactCall';
 import SelectContactChat from '../../pages/SelectContactChat';
 import MainTabs from '../TopTabs/MainTabs';
 import SearchChat from '../../pages/SearchChats';
-import ButtonSearchChat from '../../components/ButtonSearchChat';
 
 const Stack = createNativeStackNavigator();
 
@@ -29,7 +28,7 @@ function MainStack() {
         name='SearchChats'
         component={SearchChat}
         options={{
-          headerTitle: (props) => <ButtonSearchChat {...props} />,
+          headerShown: false,
         }}
       />
 
