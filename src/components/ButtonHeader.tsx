@@ -1,6 +1,7 @@
 import React from "react";
 import Icon from 'react-native-vector-icons/Entypo';
 import Icon2 from 'react-native-vector-icons/Ionicons';
+import { useNavigation } from "@react-navigation/native";
 import {
   View,
   StyleSheet,
@@ -8,11 +9,13 @@ import {
 } from "react-native";
 
 const ButtomHeader = ({props}: any) => {
+  const navigation = useNavigation();
   return(
     <View style={styles.contaniner}>
 
         <TouchableOpacity
           style={styles.search}
+          onPress={() => navigation.navigate('SearchChats')}
         >
           <Icon2 name="search" size={24} />
         </TouchableOpacity>

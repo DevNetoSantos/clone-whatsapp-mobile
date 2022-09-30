@@ -6,6 +6,8 @@ import ButtonHeaderChat from '../../components/ButtonHeaderChat';
 import SelectContactCall from '../../pages/SelectContactCall';
 import SelectContactChat from '../../pages/SelectContactChat';
 import MainTabs from '../TopTabs/MainTabs';
+import SearchChat from '../../pages/SearchChats';
+import ButtonSearchChat from '../../components/ButtonSearchChat';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +22,14 @@ function MainStack() {
         options={{
           title: 'Whatsapp',
           headerRight: (props) => <ButtomHeader {...props} />,
+        }}
+      />
+
+      <Stack.Screen
+        name='SearchChats'
+        component={SearchChat}
+        options={{
+          headerTitle: (props) => <ButtonSearchChat {...props} />,
         }}
       />
 
