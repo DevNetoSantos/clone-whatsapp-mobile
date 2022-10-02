@@ -35,24 +35,23 @@ const SelectContactChat = () => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'red',
-    flex: 1
+    flex: 1,
   },
   header: {
     height: 50,
-    backgroundColor: 'blue',
+    backgroundColor: '#128C7E',
     justifyContent: 'center'
   },
   headerButton: {
     flexDirection: 'row',
     marginLeft: 20,
-    alignItems: 'center'
+    alignItems: 'center',
   },
   headerSearch: {
 
   },
   headerButton2: {
-    marginLeft: 25
+    marginLeft: 25,
   }
 });
 
