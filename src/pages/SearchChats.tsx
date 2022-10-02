@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Icon from 'react-native-vector-icons/Ionicons';
 import ListItem from '../components/ListItem';
 import { useNavigation } from "@react-navigation/native";
-import results from '../config/ApiFake'
+import results from '../api/ApiFake'
 import {
   FlatList,
   StyleSheet,

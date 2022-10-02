@@ -1,7 +1,7 @@
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { FlatList, StatusBar } from 'react-native';
 import React from 'react';
-import ApiFake from '../config/ApiFake';
+import ApiFake from '../api/ApiFake';
 import ListItem from '../components/ListItem';
 import {
   View,

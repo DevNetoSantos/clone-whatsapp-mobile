@@ -36,8 +36,7 @@ function MainStack() {
         name='SelectContactChat'
         component={SelectContactChat}
         options={{
-          title: 'Select Contact',
-          headerRight: (props) => <ButtonHeaderChat {...props} />,
+          headerShown: false,
         }}
       />
 
