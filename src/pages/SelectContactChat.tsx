@@ -1,12 +1,15 @@
 import React from "react";
 import Icon from 'react-native-vector-icons/Ionicons';
 import { useNavigation } from "@react-navigation/native";
+import ApiContact from "../api/ApiContact";
 import {
   View,
   StyleSheet,
   TouchableOpacity,
-  Text
+  Text,
+  FlatList
 } from "react-native";
+import ListContacts from "../components/ListContacts";
 
 const SelectContactChat = () => {
   const navigation = useNavigation();
@@ -29,6 +32,11 @@ const SelectContactChat = () => {
 
         </View>
       </View>
+      <FlatList 
+        data={ApiContact}
+        style={styles.list}
+        renderItem={({ item }) => <ListContacts data={item} />}
+      />
     </View>
   );
 }
@@ -52,6 +60,9 @@ const styles = StyleSheet.create({
   },
   headerButton2: {
     marginLeft: 25,
+  },
+  list: {
+    flex: 1
   }
 });
 
